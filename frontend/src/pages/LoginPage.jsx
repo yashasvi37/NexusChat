@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useAuthStore } from "../store/useAuthStore";
 import { Link } from "react-router-dom";
 import { Eye, EyeOff, Loader2, Lock, Mail, MessageSquare } from "lucide-react";
+import AuthImagePattern from "../components/AuthImagePattern";
 
 const LoginPage = () => {
     const [showPassword, setShowPassword] = useState(false);
@@ -108,12 +109,10 @@ const LoginPage = () => {
             </div>
 
             {/* Right Side - Image/Pattern */}
-            <div className="hidden lg:flex items-center justify-center bg-base-200 p-12">
-                <div className="max-w-md text-center">
-                    <h2 className="text-3xl font-bold mb-4">Welcome back!</h2>
-                    <p className="text-base-content/60">Sign in to continue your conversations and catch up with your messages.</p>
-                </div>
-            </div>
+            <AuthImagePattern
+                title="Welcome Back to NexusChat"
+                subtitle="Sign in to continue your conversations, collaborate with your groups, and stay connected in real-time."
+            />
         </div>
     );
 };

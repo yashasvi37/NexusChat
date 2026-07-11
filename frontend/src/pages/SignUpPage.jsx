@@ -3,6 +3,7 @@ import { useAuthStore } from "../store/useAuthStore";
 import { Link } from "react-router-dom";
 import { Eye, EyeOff, Loader2, Lock, Mail, MessageSquare, User } from "lucide-react";
 import toast from "react-hot-toast";
+import AuthImagePattern from "../components/AuthImagePattern";
 
 const SignUpPage = () => {
     const [showPassword, setShowPassword] = useState(false);
@@ -141,14 +142,10 @@ const SignUpPage = () => {
             </div>
 
             {/* right side */}
-
-            <div className="hidden lg:flex items-center justify-center bg-base-200 p-12">
-                <div className="max-w-md text-center">
-                    {/* Can add an image or pattern here */}
-                    <h2 className="text-3xl font-bold mb-4">Join the community</h2>
-                    <p className="text-base-content/60">Connect with friends, share moments, and update stays in touch with your loved ones.</p>
-                </div>
-            </div>
+            <AuthImagePattern
+                title="Join the Nexus Community"
+                subtitle="Connect with friends, share real-time updates, and message securely across any device."
+            />
         </div>
     );
 };
